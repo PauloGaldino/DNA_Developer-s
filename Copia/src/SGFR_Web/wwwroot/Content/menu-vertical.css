@@ -1,0 +1,178 @@
+﻿/*tabela de cores*/
+/*#e5e5e5 = cinza | #fec63= amarelo do site*/
+
+body, html {
+    height: 100%;
+}
+
+/* Add gap to nav and right windows.*//*Adicione espaço à navegação e às janelas da direita.*/
+.main {
+ 
+    padding: 10px 10px 0 10px;
+}
+/* remove o outer padding *//*remover o preenchimento externo*/
+.main .row {
+    padding: 0px;
+    margin: 0px;
+}
+
+/*Remove rounded coners*//*remove os cantos arrendondados*/
+
+nav.sidebar.navbar {
+    text-transform: uppercase;
+    border-radius: 0px;
+  
+}
+nav.sidebar.navbar a {
+    color: #000;
+}
+
+nav.sidebar.navbar a:hover{
+    color: #000;
+    background: #fff;
+
+}
+/*configuração pra browser antigos*/
+nav.sidebar, .main {
+    -webkit-transition: margin 200ms ease-out;
+    -moz-transition: margin 200ms ease-out;
+    -o-transition: margin 200ms ease-out;
+    transition: margin 200ms ease-out;
+}
+
+
+
+/* .....NavBar: Icon only with coloring/layout.....*//*NavBar: Ícone apenas com cores / layou*/
+
+/*small/medium side display*//*visor lateral pequeno / médio*/
+@media (min-width: 768px) {
+
+    /*Allow main to be next to Nav*/ /*Permitir que main esteja ao lado de Nav*/
+    .main {
+
+        position: absolute;
+        width: calc(100% - 40px); /*keeps 100% minus nav size*/ /*mantém 100% menos o tamanho da navegação*/
+        margin-left: 40px;
+        float: right;
+    }
+
+    /*lets nav bar to be showed on mouseover*//*permite que a barra de navegação seja mostrada no mouseover*/
+    nav.sidebar:hover + .main {
+        margin-left: 200px;
+
+    }
+
+    /*Center Brand*//*Marca do Centro*/
+    nav.sidebar.navbar.sidebar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+        margin-left: 0px;
+        font-size: 14px
+    }
+    /*Center Brand*//*Marca do Centro*/
+    nav.sidebar .navbar-brand, nav.sidebar .navbar-header {
+       
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    /*Center Icons*//*Marca do Centro*/
+    nav.sidebar a {
+        padding-right: 13px;
+    }
+
+    /*adds border top to first nav box *//*adiciona borda superior à primeira caixa de navegação*/
+    nav.sidebar .navbar-nav > li:first-child {
+        border: 4px #000 solid;
+
+
+    }
+
+    /*adds border to bottom nav boxes*//*adiciona borda às caixas de navegação inferiores*/
+    nav.sidebar .navbar-nav > li {
+        border: 4px #000 solid;
+    }
+
+    /* Colors/style dropdown box*//*Caixa suspensa Cores / estilo*/
+    nav.sidebar .navbar-nav .open .dropdown-menu {
+        position: static;
+        font-size: 12px;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: 0;
+        max-width: 200px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+         
+    }
+
+    /*allows nav box to use 100% width*//*permite que a caixa de navegação use 100% de largura*/
+    nav.sidebar .navbar-collapse, nav.sidebar .container-fluid {
+        padding: 0 0px 0 0px;
+    }
+
+    /*colors dropdown box text *//*cores do texto da caixa suspensa */
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+        color: #000;
+    }
+
+    /*gives sidebar width/height*//*fornece largura / altura da barra lateral*/
+    nav.sidebar {
+        position: fixed;/*Mantem o menu fixo */
+        background: #fec63e;
+        width: 200px;
+        height: 100%;
+        margin-left: -160px;
+        float: left;
+        z-index: 8000;
+        margin-bottom: 0px;
+    }
+
+        /*give sidebar 100% width;*//*fornece largura 100% da barra lateral*/
+        nav.sidebar li {
+            width: 100%;
+        }
+
+        /* Move nav to full on mouse over*//*Mover a navegação para o máximo ao passar o mouse*/
+        nav.sidebar:hover { 
+            background: #fec63e;
+            margin-left: 0px;
+        }
+    /*for hiden things when navbar hidden*//*para coisas hiden quando navbar escondido*/
+    .forAnimate {
+        opacity: 0;
+    }
+}
+
+/* .....NavBar: Fully showing nav bar..... *//*NavBar: mostrando totalmente a barra de navegação*/
+@media (min-width: 1330px) {
+
+    /*Allow main to be next to Nav*//*Permitir que main esteja ao lado de Nav*/
+    .main {
+        width: calc(100% - 200px); /*keeps 100% minus nav size*/
+        margin-left: 200px;
+    }
+
+    /*Show all nav*//*Mostra o nav total*/
+    nav.sidebar {
+        margin-left: 0px;
+        float: left;
+    }
+        /*Show hidden items on nav*//*Monstra os itens escondidos no nav*/
+        nav.sidebar .forAnimate {
+            opacity: 1;
+        }
+}
+
+nav.sidebar .navbar-nav .open .dropdown-menu > li > a:hover, nav.sidebar .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #000;
+   
+}
+
+nav:hover .forAnimate {
+    opacity: 1;
+}
+
+section {
+    padding-left: 15px;
+}

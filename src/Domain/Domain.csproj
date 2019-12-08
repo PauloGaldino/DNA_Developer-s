@@ -5,15 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="fluentValidation" Version="8.5.1" />
-    <PackageReference Include="System.ComponentModel" Version="4.3.0" />
-    <PackageReference Include="System.ComponentModel.Annotations" Version="4.6.0" />
-    <PackageReference Include="System.Security.Claims" Version="4.3.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\CrossCutting.Bus\CrossCutting.Bus.csproj" />
-    <ProjectReference Include="..\DomainCore\DomainCore.csproj" />
+    <Folder Include="Entities\Pessoas\" />
+    <Folder Include="Interfaces\Services\" />
+    <Folder Include="Interfaces\Repositories\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>
