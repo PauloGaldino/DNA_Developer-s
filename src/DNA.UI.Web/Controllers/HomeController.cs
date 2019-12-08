@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using DNA.UI.Web.Models;
 
@@ -14,7 +10,23 @@ namespace DNA.UI.Web.Controllers
         {
             return View();
         }
+        public IActionResult Sobre()
+        {
+            return View();
+        }
+        public IActionResult Produto()
+        {
+            return View();
+        }
+        public IActionResult Portfolio()
+        {
+            return View();
+        }
 
+        public IActionResult Contato()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();

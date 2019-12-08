@@ -10,6 +10,10 @@
         <link href="~/Content/reset.css" rel="stylesheet" />
         <link href="~/Content/grid.css" rel="stylesheet" />
         <link href="~/Content/style.css" rel="stylesheet" />
+        <link href="~/Content/sobre.css" rel="stylesheet" />
+        <link href="~/Content/produto.css" rel="stylesheet" />
+        <link href="~/Content/portfolio.css" rel="stylesheet" />
+        <link href="~/Content/contato.css" rel="stylesheet" />
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -30,10 +34,10 @@
 
             <nav class="grid-12 header_menu">
                 <ul>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">Sobre</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Product">Proutos</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Sobre">Sobre</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Produto">Produtos</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Portfolio">Portfólio</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contatos</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contato">Contatos</a></li>
                     <li><a asp-area="" asp-controller="Cliente" asp-action="Index">Clientes</a></li>
                 </ul>
                 @*@await Html.PartialAsync("_LoginPartial")*@
