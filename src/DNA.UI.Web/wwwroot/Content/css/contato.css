@@ -1,8 +1,8 @@
 /*==========Interna contato====================*/
 
 .interna_contato {
-	background: url("../img/contato/titulo_interno.jpg") no-repeat center;
-	background-size: cover;
+    background: url("../../img/contato/titulo_interno.jpg")no-repeat center;    
+    background-size: cover;
 }
 
 .contato {

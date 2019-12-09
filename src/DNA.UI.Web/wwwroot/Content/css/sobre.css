@@ -1,8 +1,8 @@
 /*==========Interna sobre=====================*/
 
 .interna_sobre {
-	background: url("../img/sobre/foto-introducao.jpg") no-repeat center;
-	background-size: cover;
+    background: url("../../img/sobre/foto-introducao.jpg") no-repeat center;
+    background-size: cover;
 }
 
 /*==========Missão============================*/
