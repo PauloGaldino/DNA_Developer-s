@@ -30,11 +30,11 @@
 
     .produto_item h2 {
         top: -150px;
-        margin-bottom: -56px;
+        margin-bottom: -50px;
     }
 
     .produto_icone {
-        padding: 41px 0;
+        padding:  32px 41px;
     }
 
     .produto_info p {
@@ -96,8 +96,7 @@
     .introducao {
         margin-top: 0px;
         padding-top: 40px;
-        background: url("../img/home/introducao/introducao mobile.jpg") no-repeat center;
-        background-image: url('../../img/home/introducao/introducao-mobile.jpg');
+        background: url('../../img/home/introducao/introducao-mobile.jpg')no-repeat center;
         background-size: cover;
     }
 
