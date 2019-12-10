@@ -113,7 +113,7 @@ img {
         }
 
             .header_menu ul li a:hover {
-                color: #FFF;
+                color: #FFF;z
                 font-size: 18px;
             }
 
@@ -230,6 +230,7 @@ img {
     padding: 60px 0;
 }
 
+.produto_i
 .produtos_lista li {
     background: #fec63e;
     text-align: center;

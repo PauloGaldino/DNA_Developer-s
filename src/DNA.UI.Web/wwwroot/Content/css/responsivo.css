@@ -1,7 +1,11 @@
 /*Estilo para tablets*/
 @media only screen and (min-width: 788px) and (max-width: 979px) {
+/*=======================Menu======================================*/
+    .header_menu ul li a:hover {
 
-    /*Qualidade Home*/
+        font-size: 12px;
+    }
+    /*==================Qualidade Home=============================*/
     .qualidade img {
         margin-right: 288px;
     }
@@ -13,7 +17,7 @@
         padding: 0 10px;
     }
 
-    /*Footer*/
+    /*==================Footer=====================================*/
 
     .footer_redes ul li a {
         border: 3px solid #fec63e;
@@ -26,7 +30,7 @@
             height: 26px;
         }
 
-    /*Produtos*/
+    /*=================Produtos====================================*/
 
     .produto_item h2 {
         top: -150px;
@@ -34,13 +38,15 @@
     }
 
     .produto_icone {
-        padding:  32px 41px;
+      
+        height: 203px;
+        width:220px;
     }
-
+   
     .produto_info p {
         font-size: 14px;
         line-height: 20px;
-        height: 122px;
+        height: 103px;
         padding: 20px 30px;
     }
 
@@ -132,6 +138,7 @@
     /*Produtos*/
 
     .produto_item h2 {
+        font-size: 22px;
         top: -100px;
         margin-bottom: -68px;
     }
