@@ -12,11 +12,13 @@
         <link href="~/Content/css/style.css" rel="stylesheet" />
         <link href="~/Content/css/sobre.css" rel="stylesheet" />
         <link href="~/Content/css/produto.css" rel="stylesheet" />
-        <link href="~/Content/ss/portfolio.css" rel="stylesheet" />
+        <link href="~/Content/css/portfolio.css" rel="stylesheet" />
         <link href="~/Content/css/contato.css" rel="stylesheet" />
         <link href="~/Content/css/responsivo.css" rel="stylesheet" />
+       
     </environment>
     <environment exclude="Development">
+        <script>document.documenElement.classList.add("js")</script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
@@ -24,6 +26,7 @@
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
+
 </head>
 <body>
     <!-- Onde fica o logotipo e as configurações do menu -->
@@ -83,7 +86,7 @@
                     <ul>
                         <li>
                             <a href="http://facebook.com" target="blank">
-                                
+
                                 <img src="~/img/home/footer/facebook.svg" />
 
                             </a>
@@ -114,20 +117,24 @@
     <!-- Fim do footer -->
 
     <environment names="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
+        @*<script src="~/lib/jquery/dist/jquery.js"></script>
+            <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+            <script src="~/js/site.js" asp-append-version="true"></script>*@
+        <script src="~/js/simple-slide.js"></script>
+        <script src="~/js/script.js"></script>
     </environment>
     <environment names="Staging,Production">
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery">
-        </script>
-        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/bootstrap.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
-        </script>
-        <script src="~/js/site.min.js" asp-append-version="true"></script>
+        @*<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                    asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                    asp-fallback-test="window.jQuery">
+            </script>
+            <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/bootstrap.min.js"
+                    asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                    asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
+            </script>
+            <script src="~/js/site.min.js" asp-append-version="true"></script>*@
+        <script src="~/js/simple-slide.js"></script>
+        <script src="~/js/script.js"></script>
     </environment>
     @RenderSection("Scripts", required: false)
     @RenderSection("css")

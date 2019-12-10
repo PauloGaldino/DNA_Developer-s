@@ -8,11 +8,12 @@
 .quote-interno {
 	padding: 60px 0;
 	max-width: 500px;
+    height:260px;
 	margin: 0 auto;
 }
 
 .quote-interno p {
-	text-align: center;;
+	text-align: center;
 	font-family: Georgia,"Times New Roman", serif;
 	font-style: italic;
 	font-size: 18px;
