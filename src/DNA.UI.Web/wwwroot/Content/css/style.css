@@ -436,7 +436,7 @@ img {
     height:12px;
     margin: 4px;
     padding:0px;
-    border:none
+    border:none;
     border-radius:6px;
     text-indent:-99px;
     overflow:hidden;
@@ -445,3 +445,16 @@ img {
     [data-slide-nav] button.active{
         background:#fec63e;
     }
+ [data-anime]{
+    opacity:0;
+}
+
+.fadeInDown {
+    transform: translate3d(0,-50px,0);
+}
+ 
+ .anime {
+    opacity: 1;
+    transform:none;
+    transition: opacity 800ms, transform 800ms;
+}
