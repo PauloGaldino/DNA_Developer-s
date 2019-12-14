@@ -3,9 +3,13 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - DNA.UI.Web</title>
+    <title>@ViewData["Title"] - DNA Develpers </title>
 
-    <environment include="Development">
+    <environment names="Development">
+        <link href="~/Content/SitePersonalizado.css" rel="stylesheet" />
+            <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+            <link rel="stylesheet" href="~/css/site.css" />
+
         <link href="~/Content/css/normalize.css" rel="stylesheet" />
         <link href="~/Content/css/reset.css" rel="stylesheet" />
         <link href="~/Content/css/grid.css" rel="stylesheet" />
@@ -15,20 +19,44 @@
         <link href="~/Content/css/portfolio.css" rel="stylesheet" />
         <link href="~/Content/css/contato.css" rel="stylesheet" />
         <link href="~/Content/css/responsivo.css" rel="stylesheet" />
-       
     </environment>
-    <environment exclude="Development">
-        <script>document.documenElement.classList.add("js")</script>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
-              crossorigin="anonymous"
-              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
+                  asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+                  asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+            <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
 
+        <link href="~/Content/css/normalize.css" rel="stylesheet" />
+        <link href="~/Content/css/reset.css" rel="stylesheet" />
+        <link href="~/Content/css/grid.css" rel="stylesheet" />
+        <link href="~/Content/css/style.css" rel="stylesheet" />
+        <link href="~/Content/css/sobre.css" rel="stylesheet" />
+        <link href="~/Content/css/produto.css" rel="stylesheet" />
+        <link href="~/Content/css/portfolio.css" rel="stylesheet" />
+        <link href="~/Content/css/contato.css" rel="stylesheet" />
+        <link href="~/Content/css/responsivo.css" rel="stylesheet" />
+    </environment>
 </head>
 <body>
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand"><img src="~/images/DNA_IMAGEM.svg" style="width: 170px; height: 37px" alt="DNA Developer's Project" /></a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a asp-area="" asp-controller="Cliente" asp-action="Index">Clientes</a></li>
+                    </ul>
+                    @await Html.PartialAsync("_LoginPartial")
+                </div>
+            </div>
+        </div>*@
     <!-- Onde fica o logotipo e as configurações do menu -->
     <header class="header">
         <div class="container">
@@ -38,18 +66,18 @@
 
             <nav class="grid-12 header_menu">
                 <ul>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Sobre">Sobre</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="About">Sobre</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Produto">Produtos</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Portfolio">Portfólio</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contato">Contatos</a></li>
                     <li><a asp-area="" asp-controller="Cliente" asp-action="Index">Clientes</a></li>
                 </ul>
-                @*@await Html.PartialAsync("_LoginPartial")*@
+                @await Html.PartialAsync("_LoginPartial")
             </nav>
         </div>
     </header>
     <!-- Fim das configuraçõe do menu -->
-
+    <!--Inico do footer alterado-->
     @RenderBody()
     <section class="quebra">
         <blockquote class="quote-externo container">
@@ -110,22 +138,24 @@
         <div class="copy">
             <div class="container">
                 <p>&copy; DNA Develor's Project @DateTime.Now.Year - Version 1.0  Todos os direitos reservados</p>
-                <p>Developed by - <a href="http://jose.galdino4@fatec.sp.gov" target="_blank">José Paulo Galdino</a> - This is an open-source a Demoproject <a href="https://github.com/PauloGaldino/DNA_Developer-s" target="_blank">DNA Develper's GitHub</a></p>
+                <p>Developed by - <a href="http://jose.galdino4@fatec.sp.gov" target="_blank">José Paulo Galdino</a> - This is an open-source a Demo project <a href="https://github.com/PauloGaldino/DNA_Developer-s" target="_blank">DNA Develper's GitHub</a></p>
             </div>
         </div>
     </footer>
     <!-- Fim do footer -->
-
+    <!--Fim do footer alterado-->
     <environment names="Development">
-        @*<script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>*@
+        <script src="~/js/site.js" asp-append-version="true"></script>
+
         <script src="~/js/simple-anime.js"></script>
         <script src="~/js/simple-slide.js"></script>
         <script src="~/js/script.js"></script>
+
     </environment>
     <environment names="Staging,Production">
-        @*<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
                 asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
                 asp-fallback-test="window.jQuery">
         </script>
@@ -133,14 +163,15 @@
                 asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
                 asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
         </script>
-        <script src="~/js/site.min.js" asp-append-version="true"></script>*@
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+
         <script src="~/js/simple-anime.js"></script>
         <script src="~/js/simple-slide.js"></script>
         <script src="~/js/script.js"></script>
     </environment>
+
     @RenderSection("Scripts", required: false)
     @RenderSection("css")
+
 </body>
 </html>
-
-

@@ -1,41 +1,44 @@
-﻿using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
-using DNA.UI.Web.Models;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace DNA.UI.Web.Controllers
 {
+    [Route("home")]
     public class HomeController : Controller
     {
+        [Route("welcome")]
+        [Route("")]
+        [Route("/")]
         public IActionResult Index()
         {
             return View();
         }
-        public IActionResult Sobre()
+
+        [Route("about")]
+        public IActionResult About()
         {
-            return View();
-        }
-        public IActionResult Produto()
-        {
-            return View();
-        }
-        public IActionResult Portfolio()
-        {
+
+
             return View();
         }
 
-        public IActionResult Contato()
+        [Route("contact")]
+        public IActionResult Contact()
         {
-            return View();
-        }
-        public IActionResult Privacy()
-        {
+            ViewData["Message"] = "Your contact page.";
+
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        [Route("error")]
         public IActionResult Error()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View();
+        }
+
+        [Route("access-denied")]
+        public IActionResult AccessDenied()
+        {
+            return View();
         }
     }
 }

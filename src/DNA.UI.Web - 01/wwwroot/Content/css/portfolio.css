@@ -1,0 +1,30 @@
+/*==========Interna sobre=====================*/
+
+.interna_portfolio{
+	background: url("../../img/portfolio/fabrica.jpg")  no-repeat center;
+	background-size: cover;
+}
+
+.quote-interno {
+	padding: 60px 0;
+	max-width: 500px;
+    height:260px;
+	margin: 0 auto;
+}
+
+.quote-interno p {
+	text-align: center;
+	font-family: Georgia,"Times New Roman", serif;
+	font-style: italic;
+	font-size: 18px;
+	line-height: 25px;
+	margin-bottom: 20px; 
+}	
+
+.quote-interno cite {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	float: right;
+
+}

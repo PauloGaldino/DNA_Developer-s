@@ -1,84 +1,4 @@
-﻿using Application.Applications;
-using Application.Applications.Cadastro.Pessoas;
-using Application.Applications.Cadastro.Pessoas.Clientes;
-using Application.Applications.Cadastro.Pessoas.Contatos;
-using Application.Applications.Cadastro.Pessoas.Contatos.Emails;
-using Application.Applications.Cadastro.Pessoas.Contatos.Enderecos;
-using Application.Applications.Cadastro.Pessoas.Contatos.Telefones;
-using Application.Applications.Cadastro.Pessoas.Tipos;
-using Application.Applications.ControleEstoque;
-using Application.Applications.Producao;
-using Application.Applications.Vendas;
-using Application.Interfaces;
-using Application.Interfaces.Cadastro;
-using Application.Interfaces.Cadastro.Pessoas;
-using Application.Interfaces.Cadastro.Pessoas.Contatos;
-using Application.Interfaces.Cadastro.Pessoas.Contatos.Emails;
-using Application.Interfaces.Cadastro.Pessoas.Contatos.Enderecos;
-using Application.Interfaces.Cadastro.Pessoas.Contatos.Telefones;
-using Application.Interfaces.Cadastro.Pessoas.Tipos;
-using Application.Interfaces.ControleEstoque;
-using Application.Interfaces.Producao;
-using Application.Interfaces.Vendas;
-using AutoMapper;
-using Domain.Interfaces.Repositories;
-using Domain.Interfaces.Repositories.Cadastro.Pessoas;
-using Domain.Interfaces.Repositories.Cadastro.Pessoas.Clientes;
-using Domain.Interfaces.Repositories.Cadastro.Pessoas.Contatos;
-using Domain.Interfaces.Repositories.Cadastro.Pessoas.Contatos.Emails;
-using Domain.Interfaces.Repositories.Cadastro.Pessoas.Contatos.Enderecos;
-using Domain.Interfaces.Repositories.Cadastro.Pessoas.Contatos.Telefones;
-using Domain.Interfaces.Repositories.Cadastro.Pessoas.Tipos;
-using Domain.Interfaces.Repositories.ControleEstoque;
-using Domain.Interfaces.Repositories.Producao;
-using Domain.Interfaces.Repositories.Vendas;
-using Domain.Interfaces.Services;
-using Domain.Interfaces.Services.Cadastro.Pessoas;
-using Domain.Interfaces.Services.Cadastro.Pessoas.Contatos;
-using Domain.Interfaces.Services.Cadastro.Pessoas.Contatos.Emails;
-using Domain.Interfaces.Services.Cadastro.Pessoas.Contatos.Enderecos;
-using Domain.Interfaces.Services.Cadastro.Pessoas.Contatos.Telefones;
-using Domain.Interfaces.Services.Cadastro.Pessoas.Tipos;
-using Domain.Interfaces.Services.ControleEstoque;
-using Domain.Interfaces.Services.Producao;
-using Domain.Interfaces.Services.Vendas;
-using Domain.Services;
-using Domain.Services.Cadastro.Pessoas;
-using Domain.Services.Cadastro.Pessoas.Clientes;
-using Domain.Services.Cadastro.Pessoas.Contatos;
-using Domain.Services.Cadastro.Pessoas.Contatos.Emails;
-using Domain.Services.Cadastro.Pessoas.Contatos.Enderecos;
-using Domain.Services.Cadastro.Pessoas.Contatos.Telefones;
-using Domain.Services.Cadastro.Pessoas.Tipos;
-using Domain.Services.ControleEstoque;
-using Domain.Services.Producao;
-using Domain.Services.Vendas;
-using InfraData.Data.Context;
-using InfraData.Repositories;
-using InfraData.Repositories.Cadastro.Pessoas;
-using InfraData.Repositories.Cadastro.Pessoas.Clientes;
-using InfraData.Repositories.Cadastro.Pessoas.Contatos;
-using InfraData.Repositories.Cadastro.Pessoas.Contatos.Emails;
-using InfraData.Repositories.Cadastro.Pessoas.Contatos.Enderecos;
-using InfraData.Repositories.Cadastro.Pessoas.Contatos.Telefones;
-using InfraData.Repositories.Cadastro.Pessoas.Tipo;
-using InfraData.Repositories.ControleEstoque;
-using InfraData.Repositories.Producao;
-using InfraData.Repositories.Vendas;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Controllers;
-using Microsoft.AspNetCore.Mvc.ViewComponents;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using SGFR_Web_v02.AutoMapper;
-using SimpleInjector;
-using SimpleInjector.Integration.AspNetCore.Mvc;
-using SimpleInjector.Lifestyles;
+﻿using SGFR_Web_v02.AutoMapper;
 
 namespace SGFR_Web_v02
 {
@@ -121,18 +41,9 @@ namespace SGFR_Web_v02
 
             //======================Mysql===========================================
           
-            services.AddDbContext<DbContextoGeral>(options =>
+            services.AddDbContext<DbContexto>(options =>
               options.UseMySql(
                   Configuration.GetConnectionString("DefaultConnection")));
-
-
-            services.AddDbContext<DbContextoGeral>(options =>
-              options.UseMySql(
-                  Configuration.GetConnectionString("DefaultConnection")));
-
-            services.AddDefaultIdentity<IdentityUser>()
-                .AddEntityFrameworkStores<DbContextoGeral>();
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             Mapper.Initialize(cfg => cfg.AddProfile<AutoMapperProfile>());
 

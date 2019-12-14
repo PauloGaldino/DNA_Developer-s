@@ -1,9 +1,5 @@
-﻿using Domain.Entities.Pessoas.Contatos;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System;
-using Domain.Entities.Pessoas.Clientes;
-using Domain.Entities.Pessoas.Funcionarios;
-using Domain.Entities.Pessoas.Documentos;
 
 namespace Domain.Entities.Pessoas
 {
@@ -27,15 +23,15 @@ namespace Domain.Entities.Pessoas
         public PessoaTipo PessoaTipo { get; set; }
 
         public int ContatoId { get; set; }
-        public Contato Contatos { get; set; }
+      //  public Contato Contatos { get; set; }
 
         public int FisicaId { get; set; }
-        public DocumentoFisica DocumentoFisica { get; set; }
+       // public DocumentoFisica DocumentoFisica { get; set; }
         public int JuridicaId { get; set; }
-        public DocumentoJuridica Documentouridica { get; set; }
+       // public DocumentoJuridica Documentouridica { get; set; }
 
-        public ICollection<Cliente> Clientes { get; set; }
-        public ICollection<Funcionario> Funcionarios { get; set; }
+       // public ICollection<Cliente> Clientes { get; set; }
+       // public ICollection<Funcionario> Funcionarios { get; set; }
 
     }
 }

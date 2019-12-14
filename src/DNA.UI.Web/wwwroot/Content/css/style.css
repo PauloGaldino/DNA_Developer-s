@@ -143,7 +143,7 @@ img {
 .quote-externo {
     max-width: 320px;
     margin: 0 auto;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
     color: #fff;
 }
 
@@ -229,7 +229,6 @@ img {
     padding: 60px 0;
 }
 
-.produto_i
 .produtos_lista li {
     background: #fec63e;
     text-align: center;
@@ -247,6 +246,7 @@ img {
     text-transform: uppercase;
     letter-spacing: .1em;
     margin-top: 20px;
+    text-align:center;
 }
 
     .produtos_lista li h3:after {
