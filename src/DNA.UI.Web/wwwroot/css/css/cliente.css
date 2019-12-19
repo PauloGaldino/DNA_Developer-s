@@ -1,0 +1,17 @@
+﻿/*==========Estilo Cliente============================*/
+.interna_cliente {
+    background: url("../../images/carousel1.jpg")no-repeat center;
+    background-size: cover;
+}
+
+table {
+    padding: 40px 0;
+}
+ 
+.table td {
+    border: none !important;
+}
+.table th {
+    border: none !important;
+}
+.table td 

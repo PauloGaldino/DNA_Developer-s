@@ -3,75 +3,72 @@
 @{
     ViewData["Title"] = "Gerenciamento do Cliente";
 }
-
 <div>
-    <h2>@ViewData["Title"]</h2>
-</div>
-<hr />
 
-<div class="row">
-    <div class="col-md-12">
-        <div>
-            <div class="pull-left">
-                <a asp-action="Create" class="btn btn-primary">
-                    <span title="Register New" class="glyphicon glyphicon-plus-sign"></span> Registrar Novo
-                </a>
-            </div>
+    <!--Inicio da secção de introdução interna -->
+    <section class="introducao-interna interna_cliente">
+        <div class="cliente container">
+            <h1 data-anime="400" class="fadeInDown">Lista de clientes</h1>
+            <p data-anime="800" class="fadeInDown">Sempre escolhemos o melhor.</p>
         </div>
-    </div>
-</div>
-<br />
+    </section>
+    <!-- Final da introdução interna -->
+    <div class="cliente container">
+        <table data-anime="1200" id="cliente_table" class="table grid-18 table_cliente fadeInDown">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Nome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DataNascimento)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nome)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DataNascimento)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id" title="Editar" class="btn btn-preto">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </a>
 
-<div class="panel panel-default">
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DataNascimento)
-            </th>
-            <th></th>
-        </tr>
-        </thead>
-        <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Nome)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Email)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DataNascimento)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id" title="Editar" class="btn btn-warning">
-                        <span class="glyphicon glyphicon-pencil"></span>
-                    </a>
-                        
-                    <a asp-action="Details" asp-route-id="@item.Id" title="Detalhes" class="btn btn-primary">
-                        <span class="glyphicon glyphicon-search"></span>
-                    </a>
-                        
-                    <a asp-action="Delete" asp-route-id="@item.Id" title="Deletar" class="btn btn-danger">
-                        <span class="glyphicon glyphicon-trash"></span>
-                    </a>
-                    
-                    <button type="button" class="btn btn-purple viewbutton" title="History" data-id="@item.Id" data-toggle="modal" data-target="#clienteHistory">
-                        <span class="glyphicon glyphicon-time"></span>
-                    </button>
-                </td>
-            </tr>
-        }
-        </tbody>
-    </table>
+                            <a asp-action="Details" asp-route-id="@item.Id" title="Detalhes" class="btn btn-preto">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </a>
+
+                            <a asp-action="Delete" asp-route-id="@item.Id" title="Deletar" class="btn btn-preto">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </a>
+
+                            <button type="button" class="btn btn-preto " title="History" data-id="@item.Id" data-toggle="modal" data-target="#clienteHistory">
+                                <span class="glyphicon glyphicon-time"></span>
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div  class="call">
+        <a data-anime="2000"  asp-action="Create" class="btn btn-preto fadeInDown">
+            <span title="Registrar novo Cliente" class="glyphicon glyphicon-plus-sign"></span> Registrar Novo
+        </a>
+    </div>
 </div>
 
 <div class="modal fade" id="clienteHistory" role="dialog">
@@ -85,23 +82,24 @@
                 <p id="clienteHistoryData"></p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-preto" data-dismiss="modal">Fechar</button>
             </div>
         </div>
     </div>
 </div>
 
+
 @section scripts
-{
+    {
     <script type="text/javascript">
-        $(".viewbutton").on("click", function() {
+        $(".viewbutton").on("click", function () {
             var clienteId = $(this).data('id');
             $.ajax({
                 url: "https://localhost:44366/cliente-management/cliente-history/" + clienteId,
-                 url: "https://localhost:5001/cliente-management/cliente-history/" + clienteId,
+                url: "https://localhost:5001/cliente-management/cliente-history/" + clienteId,
                 //url: "http://DNA_Developer.azurewebsites.net/cliente-management/clinete-history/" + clienteId,
                 cache: false
-            }).done(function(data) {
+            }).done(function (data) {
                 var formatHtml = "<table class='table table-striped'>";
                 formatHtml += "<thead><th>Action</th><th>When</th><th>Id</th><th>Nome</th><th>E-mail</th><th>DataNascimento</th><th>By User</th></thead>";
 
@@ -121,5 +119,5 @@
                 $("#clienteHistoryData").html(formatHtml);
             });
         });
-</script>
+    </script>
 }

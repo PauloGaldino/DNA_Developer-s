@@ -3,34 +3,42 @@
     ViewData["Title"] = "Registrar";
 }
 
-<h2>@ViewData["Title"]</h2>
 
-<div class="row">
-    <div class="col-md-4">
-        <form asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post">
-            <h4>Create a new account.</h4>
-            <hr />
+<div>
+    <!--Inicio da secção de introdução interna -->
+    <section class="introducao-interna interna_registro">
+        <div class="container">
+            <h1 data-anime="400" class="fadeInDown">Criando uma nova conta</h1>
+            <p data-anime="800" class="fadeInDown">Conheça mais sobre a nossa fábrica</p>
+        </div>
+    </section>
+    <!--Final da secção de introdução-->
+    <!--Inicio da secção do formulário de registro -->
+    <section class="registro container">
+        <form data-anime="1200"id="form_registro" asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post"  class="contato_form grid-8 fadeInDown">
+
             <div asp-validation-summary="All" class="text-danger"></div>
-            <div class="form-group">
+            <div class="form-registro">
                 <label asp-for="Email"></label>
                 <input asp-for="Email" class="form-control" />
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-registro">
                 <label asp-for="Password"></label>
                 <input asp-for="Password" class="form-control" />
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-registro">
                 <label asp-for="ConfirmPassword"></label>
                 <input asp-for="ConfirmPassword" class="form-control" />
                 <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
             </div>
-            <button type="submit" class="btn btn-default">Registrar</button>
+            <div class="btn_registrar">
+                <button type="submit" class="btn btn-preto">Registrar</button>
+            </div>
         </form>
-    </div>
+    </section>
 </div>
-
 @section Scripts {
     @await Html.PartialAsync("_ValidationScriptsPartial")
 }

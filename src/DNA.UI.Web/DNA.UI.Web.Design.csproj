@@ -35,31 +35,31 @@
 
 
   <ItemGroup>
-    <Content Update="wwwroot\Content\css\contato.css">
+    <Content Update="wwwroot\css\css\contato.css">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Update="wwwroot\Content\css\grid.css">
+    <Content Update="wwwroot\css\css\grid.css">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Update="wwwroot\Content\css\normalize.css">
+    <Content Update="wwwroot\css\css\normalize.css">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Update="wwwroot\Content\css\portfolio.css">
+    <Content Update="wwwroot\css\css\portfolio.css">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Update="wwwroot\Content\css\produto.css">
+    <Content Update="wwwroot\css\css\produto.css">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Update="wwwroot\Content\css\reset.css">
+    <Content Update="wwwroot\css\css\reset.css">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Update="wwwroot\Content\css\responsivo.css">
+    <Content Update="wwwroot\css\css\responsivo.css">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Update="wwwroot\Content\css\sobre.css">
+    <Content Update="wwwroot\css\css\sobre.css">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Update="wwwroot\Content\css\style.css">
+    <Content Update="wwwroot\css\css\style.css">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
   </ItemGroup>

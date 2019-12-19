@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
 namespace DNA.UI.Web.Controllers
-{
+{   
     [Route("home")]
     public class HomeController : Controller
     {
@@ -13,19 +13,30 @@ namespace DNA.UI.Web.Controllers
             return View();
         }
 
-        [Route("about")]
-        public IActionResult About()
+        [Route("sobre")]
+        public IActionResult Sobre()
         {
 
 
             return View();
         }
 
-        [Route("contact")]
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
 
+        [Route("produto")]
+        public IActionResult Produto()
+        {
+            return View();
+        }
+
+        [Route("portfolio")]
+        public IActionResult Portfolio()
+        {
+            return View();
+        }
+
+        [Route("contato")]
+        public IActionResult Contato()
+        {
             return View();
         }
 

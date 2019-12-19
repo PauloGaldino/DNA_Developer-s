@@ -43,6 +43,7 @@
 .grid-15 	{width: 880px;}
 .grid-16 	{width: 940px;}
 .grid-1-3	{width: 300px;}
+.grid-1-4   {width: 520px;}
 
 @media only screen and (min-width: 788px) and (max-width: 979px) {
 
@@ -67,6 +68,7 @@
 .grid-15 	{width: 700px;}
 .grid-16 	{width: 748px;}
 .grid-1-3   {width: 236px;}
+.grid-1-4   {width: 400px;}
 
 }
 
