@@ -1,21 +1,30 @@
-﻿@using DNA.UI.Web.Views.Manage
+﻿<!--Index Manager-->
+@using DNA.UI.Web.Views.Manage
 @model IndexViewModel
 @{
     ViewData["Title"] = "Perfil";
     ViewData.AddActivePage(ManageNavPages.Index);
 }
-<div>
-    @Html.Partial("_StatusMessage", Model.StatusMessage)
 
+@Html.Partial("_StatusMessage", Model.StatusMessage)
+<div>
+    <!--Inicio da secção de introdução interna -->
+    <section class="introducao-interna interna_manager">
+        <div class="container">
+            <h1 data-anime="400" class="fadeInDown">Gerenciamento de contas</h1>
+            <p data-anime="800" class="fadeInDown">Tire suas dúvidas com a gente.</p>
+        </div>
+    </section>
+    <!-- Final da introdução interna -->
     <div class="container">
-        <div class="grid-12">
+        <div class="grid-10">
             <form method="post">
                 <div asp-validation-summary="All" class="text-danger"></div>
-                <div class="form-group">
+                <div class="form-label">
                     <label asp-for="Username"></label>
                     <input asp-for="Username" class="form-control" disabled />
                 </div>
-                <div class="form-group">
+                <div class="form-label">
                     <label asp-for="Email"></label>
                     @if (Model.IsEmailConfirmed)
                     {
@@ -36,7 +45,7 @@
                     <input asp-for="PhoneNumber" class="form-control" />
                     <span asp-validation-for="PhoneNumber" class="text-danger"></span>
                 </div>
-                <button type="submit" class="btn btn-default">Salvar</button>
+                <button type="submit" class="btn btn-preto">Salvar</button>
             </form>
         </div>
     </div>

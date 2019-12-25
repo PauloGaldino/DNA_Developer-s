@@ -55,7 +55,7 @@
                                 <span class="glyphicon glyphicon-trash"></span>
                             </a>
 
-                            <button type="button" class="btn btn-preto " title="History" data-id="@item.Id" data-toggle="modal" data-target="#clienteHistory">
+                            <button type="button" class="btn btn-preto historia " title="Historia" data-id="@item.Id" data-toggle="modal" data-target="#clienteHistory">
                                 <span class="glyphicon glyphicon-time"></span>
                             </button>
                         </td>
@@ -64,10 +64,12 @@
             </tbody>
         </table>
     </div>
-    <div  class="call">
-        <a data-anime="2000"  asp-action="Create" class="btn btn-preto fadeInDown">
-            <span title="Registrar novo Cliente" class="glyphicon glyphicon-plus-sign"></span> Registrar Novo
-        </a>
+    <div class="call">
+        <div class="btn_cliente">
+            <a data-anime="2000" asp-action="Create" class="btn btn-preto fadeInDown">
+                <span title="Registrar novo Cliente" class="glyphicon glyphicon-plus-sign"></span> Registrar Novo
+            </a>
+        </div>
     </div>
 </div>
 
