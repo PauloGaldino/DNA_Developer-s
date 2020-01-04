@@ -681,7 +681,7 @@ img {
     top: 0;
     width: 100%;
     background: #fec63e; /* Amarelo */
-    padding: 25px 0;
+    padding: 15px 0;
     z-index: 10;
 }
 
@@ -692,7 +692,7 @@ img {
     .header_menu ul li {
         display: inline-block;
         margin-left: 5px;
-        margin-top: 30px;
+        margin-top: 15px;
     }
 
         .header_menu ul li a {
@@ -700,19 +700,39 @@ img {
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: .1em;
-            font-size: 14px;
-            line-height: 20px;
+            font-size: 12px;
+            line-height: 10px;
             padding: 10px 0;
         }
 
             .header_menu ul li a:hover {
                 color: #FFF;
-                font-size: 15px;
+                font-size: 13px;
             }
 
             .header_menu ul li a.menu_ativo {
                 color: #FFF;
             }
+
+.header_login ul li {
+    display: inline-block;
+    margin-left: 5px;
+    margin-top: 15px;
+}
+
+.header_login .btn-link {
+    margin-left: 5px;
+    margin-top: -5px;
+    border: 0px solid #fec63e;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-size: 12px;
+    line-height: 10px;
+    background: #fec63e;
+    padding: 3px;
+}
 
 /* ================Introdução============================ */
 .introducao {
@@ -1384,25 +1404,33 @@ img {
     background-size: cover;
 }
 
-
 .table td {
-    
     border: none !important;
 }
 
 .table th {
     border: none !important;
 }
+
 .table_cliente {
     margin-top: 40px;
 }
-btn .bnt-preto hitoria {
-    background:blue;
 
+.call .btn_cliente {
+    margin-bottom: 40px;
 }
-.call .btn_cliente{
-    margin-bottom:40px;
+/*==========Estilo Cliente============================*/
+.interna_cliente_detalhe {
+    background: url("../../images/carousel1.jpg")no-repeat center;
+    background-size: cover;
 }
+
+
+.detalhes {
+    padding-left: 300px;
+    padding-top: 40px;
+}
+
 /*=======================Final do Cliente======================================*/
 
 /*=======================Começo do Registro====================================*/
@@ -1468,7 +1496,6 @@ btn .bnt-preto hitoria {
         margin: 20px auto 40px;
         max-width: 450px;
         font-size: 24px;
-      
     }
 /*=======================Final do Error====================================*/
 /*=======================Começo do Login=======================================*/

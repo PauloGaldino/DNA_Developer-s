@@ -5,31 +5,44 @@
 }
 
 <h2>@ViewData["Title"]</h2>
+<div>
+    <!--Inicio da secção de introdução interna -->
+    <section class="introducao-interna interna_cliente">
+        <div class="cliente container">
+            <h1 data-anime="400" class="fadeInDown">Lista de clientes</h1>
+            <p data-anime="800" class="fadeInDown">Sempre escolhemos o melhor.</p>
+        </div>
+    </section>
+    <!-- Final da introdução interna -->
+    <div class="cliente container ">
 
-<div>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.DataNascimento)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.DataNascimento)
-        </dd>
-    </dl>
+        <dl class=" dl-horizontal">
+            <div class="detalhes">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Nome)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.DataNascimento)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.DataNascimento)
+                </dd>
+            </div>
+        </dl>
+    </div>
+    <div class="call">
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-preto">Editar</a>
+        <a asp-action="Index" class="btn btn-preto">Voltar para a lista</a>
+    </div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Editar</a> 
-    <a asp-action="Index" class="btn btn-info">Voltar para a lista</a>
-</div>
+
+
