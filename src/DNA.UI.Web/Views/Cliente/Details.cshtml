@@ -15,9 +15,8 @@
     </section>
     <!-- Final da introdução interna -->
     <div class="cliente container ">
-
-        <dl class=" dl-horizontal">
-            <div class="detalhes">
+        <div class="detalhes">
+            <dl class=" dl-horizontal">
                 <dt>
                     @Html.DisplayNameFor(model => model.Nome)
                 </dt>
@@ -36,13 +35,14 @@
                 <dd>
                     @Html.DisplayFor(model => model.DataNascimento)
                 </dd>
-            </div>
-        </dl>
+
+            </dl>
+        </div>
     </div>
-    <div class="call">
-        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-preto">Editar</a>
-        <a asp-action="Index" class="btn btn-preto">Voltar para a lista</a>
-    </div>
+</div>
+<div class="call">
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-preto">Editar</a>
+    <a asp-action="Index" class="btn btn-preto">Voltar para a lista</a>
 </div>
 
 

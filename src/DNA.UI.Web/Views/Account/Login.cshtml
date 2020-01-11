@@ -21,7 +21,7 @@
     <div class="container">
         <div class="grid-16">
             <section class="login_container">
-                <form  id="form_registro" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="login_form grid-15 ">
+                <form  asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="login_form grid-15 ">
                     <div asp-validation-summary="All" class="text-danger"></div>
                     <div class="form-login">
                         <label asp-for="Email"></label>

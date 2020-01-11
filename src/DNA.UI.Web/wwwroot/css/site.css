@@ -643,13 +643,13 @@ img {
     color: #000;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
     .subtitulo:after {
         content: "";
         display: block;
-        width: 60px;
+        width: 30px;
         height: 3px;
         background: #000;
         margin: 8px auto;
@@ -673,6 +673,48 @@ img {
         background: #000;
         margin: 8px 0;
     }
+
+/* Carousel */
+
+.carousel-caption p {
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 20px;
+    font-size: 20px;
+  
+    line-height: 1.4;
+}
+
+.carousel-caption h1 {
+    margin-top: 18px;
+    font-size: 48px;
+    color: #FFF;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+#myCarousel li {
+    border-color: #fff;
+    background: transparent;
+}
+    #myCarousel .active{
+        background: #fec63e;
+    }
+    /* Make .svg files in the carousel display properly in older browsers */
+    .carousel-inner .item img[src$=".jpg"] {
+        width: 100%;
+        height: 400px;
+    }
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none
+    }
+}
+
 
 /* ================Header=============================== */
 
@@ -714,25 +756,23 @@ img {
                 color: #FFF;
             }
 
-.header_login ul li {
+.header_login {
     display: inline-block;
     margin-left: 5px;
-    margin-top: 15px;
+    margin-top: -5px;
 }
 
-.header_login .btn-link {
-    margin-left: 5px;
-    margin-top: -5px;
-    border: 0px solid #fec63e;
-    color: #000;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    font-size: 12px;
-    line-height: 10px;
-    background: #fec63e;
-    padding: 3px;
-}
+    .header_login .btn-link {
+        border: 0px;
+        color: #000;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        font-size: 12px;
+        line-height: 10px;
+        background: #fec63e;
+        padding: 3px;
+    }
 
 /* ================Introdução============================ */
 .introducao {
@@ -746,7 +786,7 @@ img {
 }
 
     .introducao h1 {
-        margin-top: 20px;
+        margin-top: 18px;
         font-size: 48px;
         color: #FFF;
         font-weight: bold;
@@ -754,9 +794,9 @@ img {
     }
 
 .quote-externo {
-    max-width: 320px;
+    max-width: 450px;
     margin: 0 auto;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     color: #fff;
 }
 
@@ -776,7 +816,7 @@ img {
     .quote-externo cite {
         font-style: normal;
         font-weight: bold;
-        font-size: 18px;
+        font-size: 16px;
         text-shadow: black 0.1em 0.1em 0.1em;
         letter-spacing: .1em;
     }
@@ -785,7 +825,7 @@ img {
 
 .introducao-interna {
     width: 100%;
-    margin-top: 92px;
+    margin-top: 73px;
     height: 160px;
     text-align: center;
     color: #fff;
@@ -1398,7 +1438,8 @@ img {
 
 /*=======================Final do Contato======================================*/
 /*=======================Começo do Cliente=====================================*/
-/*==========Estilo Cliente============================*/
+/*==========Index Cliente============================*/
+
 .interna_cliente {
     background: url("../../images/carousel1.jpg")no-repeat center;
     background-size: cover;
@@ -1419,7 +1460,10 @@ img {
 .call .btn_cliente {
     margin-bottom: 40px;
 }
-/*==========Estilo Cliente============================*/
+
+/*==========Registro Cliente============================*/
+
+/*==========Detalhe Cliente============================*/
 .interna_cliente_detalhe {
     background: url("../../images/carousel1.jpg")no-repeat center;
     background-size: cover;
@@ -1438,6 +1482,8 @@ img {
 .btn_registro .btn {
     background: transparent;
 }
+/*==========Interna sobre=====================*/
+
 
 .interna_registro {
     background: url("../../images/carousel3.jpg")no-repeat center;

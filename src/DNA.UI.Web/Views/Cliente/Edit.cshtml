@@ -5,51 +5,53 @@
 }
 
 <div>
+    <!--Inicio da secção de introdução interna -->
+    <section class="introducao-interna interna_cliente">
+        <div class="cliente container">
+            <h1 data-anime="400" class="fadeInDown">Registro de novos clientes</h1>
+            <p data-anime="800" class="fadeInDown">Sempre escolhemos o melhor.</p>
+        </div>
+    </section>
+    <!-- Final da introdução interna -->
+    <div class="registro container ">
+        <form asp-action="Edit">
+            <div class="contato_form grid-15">
+                <input type="hidden" asp-for="Id" />
 
-    <form asp-action="Edit">
-        <div class="form-horizontal">
-            <hr />
+                <input type="hidden" asp-for="Id" />
 
-            <input type="hidden" asp-for="Id" />
+                @* Replacing classic Validation Summary to Custom ViewComponent as TagHelper *@
+                <vc:summary />
 
+                <div class="form-registro">
+                    <label asp-for="Nome"></label>
 
-            <input type="hidden" asp-for="Id" />
-
-            @* Replacing classic Validation Summary to Custom ViewComponent as TagHelper *@
-            <vc:summary />
-
-            <div class="form-group">
-                <label asp-for="Nome" class="col-md-2 control-label"></label>
-                <div class="col-md-10">
                     <input asp-for="Nome" class="form-control" />
                     <span asp-validation-for="Nome" class="text-danger"></span>
                 </div>
-            </div>
 
-            <div class="form-group">
-                <label asp-for="Email" class="col-md-2 control-label"></label>
-                <div class="col-md-10">
+                <div class="form-registro">
+                    <label asp-for="Email"></label>
                     <input asp-for="Email" class="form-control" />
                     <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
-            </div>
 
-            <div class="form-group">
-                <label asp-for="DataNascimento" class="col-md-2 control-label"></label>
-                <div class="col-md-10">
+                <div class="form-registro">
+                    <label asp-for="DataNascimento"></label>
                     <input asp-for="DataNascimento" class="form-control" />
                     <span asp-validation-for="DataNascimento" class="text-danger"></span>
                 </div>
-            </div>
 
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Salvar" class="btn btn-success" />
-                    <a asp-action="Index" class="btn btn-info">Voltar para a lista</a>
-                </div>
             </div>
-        </div>
-    </form>
+        </form>
+
+    </div>
+    <div class="call">
+
+        <input type="submit" value="Salvar" class="btn btn-preto" />
+        <a asp-action="Index" class="btn btn-preto">Voltar para a lista</a>
+
+    </div>
 </div>
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
